@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2017 by WZoltan (http://jsbin.com/sicana/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>LineToCenter</title>
+</head>
+<body>
+  <canvas id ="myCanvas" height= "360" width = "480" style ="border: 1px solid black"></canvas>
+<script id="jsbin-javascript">
+var canvas = document.getElementById("myCanvas");
+var sn = canvas.getContext('2d');
+var cw = canvas.width;
+var ch = canvas.height;
+var color = 'rgb(100,220,211)';
+
+function snidling(){
+  for(var i=0; i<100;i++){
+  var x =  Math.floor(Math.random()*(cw));
+  var y =  Math.floor(Math.random()*(ch));
+  sn.moveTo(x,y);
+  sn.lineTo(cw/2,ch/2);
+  sn.strokeStyle = color;
+  sn.stroke();
+ }/*ciklus vége*/
+}/*függvény vége*/
+snidling();
+</script>
+</body>
+</html>
